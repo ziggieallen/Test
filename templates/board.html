@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>BOGGLE</h1>
+
+    <form method="POST" class="add-word">
+        Enter a word<input type="text" name="word" class="word">
+        <button type="submit">Submit</button>
+    </form>
+
+<table>
+    {% for letter in board %}
+    <tr>
+        <td>{{ letter[0] }}</td>
+        <td>{{ letter[1] }}</td>
+        <td>{{ letter[2] }}</td>
+        <td>{{ letter[3] }}</td>
+        <td>{{ letter[4] }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+
+{% endblock %}
